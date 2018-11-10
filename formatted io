@@ -1,0 +1,73 @@
+#include<stdio.h>
+void main()
+{
+int a,b,d,w,p;
+float x;
+double y;
+char str[20];
+printf("FORMATTED INPUT & OUTPUT\n");
+printf("Enter three integer numbers\n");
+scanf("%d%*d%d",&a,&b);
+printf("value in a is%d\n Value in b is %d\n",a,b);
+printf("Enter a 4 digit number\n");
+scanf("%4d",&d);
+printf("%6d\n",d);
+printf("%2d\n",d);
+printf("%-6d\n",d);
+printf("%06d\n",d);
+printf("Enter two floating point number\n");
+scanf("%f%f",&x,&y);
+printf("Enter the field width\n");
+scanf("%d",&w);
+printf("Enter the precision\n");
+scanf("%d",&p);
+printf("%*.*f\n",w,p,x);
+printf("%e\n",x);
+printf("%-7.2f\n",y);
+printf("%10.2e\n",y);
+printf("Enter a string\n");
+scanf("%s",str);
+printf("%20s\n",str);
+printf("%30.10s\n",str);
+printf("%.5s\n",str);
+printf("%-20s\n",str);
+printf("%5s\n",str);
+}
+
+output
+
+[chinchu@localhost Desktop]$ cc formattedio.c
+[chinchu@localhost Desktop]$ ./a.out
+FORMATTED INPUT & OUTPUT
+Enter three integer numbers
+1
+2
+4
+value in a is1
+ Value in b is 4
+Enter a 4 digit number
+9876
+  9876
+9876
+9876  
+009876
+Enter two floating point number
+32.1
+56.4
+Enter the field width
+2
+Enter the precision
+3
+32.100
+3.210000e+01
+0.00   
+ 5.50e-315
+Enter a string
+chinchu
+             chinchu
+                       chinchu
+chinc
+chinchu             
+chinchu
+
+
