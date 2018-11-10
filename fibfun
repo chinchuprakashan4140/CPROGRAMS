@@ -1,0 +1,45 @@
+#include<stdio.h>
+int fib(int,int);
+int t=3,n;
+int main()
+{
+int a=0,b=1,f,c;
+printf("Enter the Limit\n");
+scanf("%d",&n);
+printf("Fibonacci series\n");
+printf("%d\n%d\n",a,b);
+f=fib(a,b);
+}
+int fib(int a,int b)
+{
+int c,f;
+if(t<=n)
+{
+c=a+b;
+printf("%d\n",c);
+t++;
+f=fib(b,c);
+return f;
+}
+}
+
+
+output
+
+[chinchu@localhost Desktop]$ cc fibfun.c
+[chinchu@localhost Desktop]$ ./a.out
+Enter the Limit
+10
+Fibonacci series
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+
+

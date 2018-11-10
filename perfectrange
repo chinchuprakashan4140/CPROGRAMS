@@ -1,0 +1,38 @@
+#include<stdio.h>
+void main()
+{
+int i,j,s,r;
+printf("Enter the limit\n");
+scanf("%d",&r);
+printf("Perfect are numbers are\n");
+for(i=1;i<=r;i++)
+{
+s=0;
+for(j=1;j<=i/2;j++)
+{
+if(i%j==0)
+{
+s=s+j;
+}
+}
+if(i==s)
+{
+printf("%d \n",i);
+}
+}
+}
+
+
+output
+
+[chinchu@localhost Desktop]$ cc perfectrang.c
+[chinchu@localhost Desktop]$ ./a.out
+Enter the limit
+500
+Perfect are numbers are
+6 
+28 
+496 
+
+
+

@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+char s[20],s1[10],s2[10],s3[10],s4[10];
+int n,a;
+printf("Enter the string:\n");
+scanf("%s",s);
+n=strlen(s);
+printf("Length of string is: %d\n",n);
+printf("Enter two strings:\n");
+scanf("%s%s",s1,s2);
+strcpy(s1,s2);
+printf("Copied string is:%s\n",s1);
+printf("Enter two strings:\n");
+scanf("%s%s",s3,s4);
+printf("Comparing the string is\n");
+a=strcmp(s3,s4);
+if(a==0)
+{
+printf("Two strings are equal\n");
+}
+else
+{
+printf("Two strings are not equal\n");
+}
+strcat(s3,s4);
+printf("The concatenated string:%s\n",s3);
+}
+
+
+output
+
+[chinchu@localhost Desktop]$ cc stringmanp.c
+[chinchu@localhost Desktop]$ ./a.out
+Enter the string:
+good
+Length of string is: 4
+Enter two strings:
+good
+morning
+Copied string is:morning
+Enter two strings:
+good
+morning
+Comparing the string is
+Two strings are not equal
+The concatenated string:goodmorning
+
+
+

@@ -1,0 +1,42 @@
+#include<stdio.h>
+void main()
+{
+int l,n,d,i;
+printf("Enter a limit:\n");
+scanf("%d",&l);
+printf("Armstrong numbers are:\n");
+i=1;
+while(i<=l)
+{
+int p,s;
+n=i;
+s=0;
+while(n>0)
+{
+d=n%10;
+p=d*d*d;
+s=s+p;
+n=n/10;
+}
+if(s==i)
+{
+printf("%d\n",i);
+}
+i++;
+}
+}
+
+output
+
+[chinchu@localhost Desktop]$ cc amstrnlimit.c
+[chinchu@localhost Desktop]$ ./a.out
+Enter a limit:
+800
+Armstrong numbers are:
+1
+153
+370
+371
+407
+
+
